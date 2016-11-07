@@ -239,6 +239,9 @@ Copyright (C) 2014 Bastian Bechtold
      }
 
      function clearHistory() {
+       if (!confirm('Clear history?')) {
+           return;
+       }
        localStorage['pomodoroHistory'] = [];
        localStorage.removeItem('pomodoroStart');
        localStorage.removeItem('pomodoroEnd');

@@ -169,6 +169,7 @@ Copyright (C) 2014 Bastian Bechtold
      tomatoImage.src = 'tomato.png';
 
      function init() {
+       if (Notification.permission !== "granted") Notification.requestPermission();
        var history = loadHistory();
        drawHistory(history);
        var canvas = document.getElementById('tomato');
@@ -396,6 +397,12 @@ Copyright (C) 2014 Bastian Bechtold
      }
 
      function playDing() {
+       if (Notification.permission === "granted") {
+           var notification = new Notification('DING!', {
+               icon: 'tomato.png',
+               body: "Pomodoro finished!",
+           });
+       }
        document.getElementById('ding').play();
      }
 

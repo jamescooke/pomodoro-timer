@@ -21,6 +21,9 @@ Copyright (C) 2014 Bastian Bechtold
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Pomodoro</title>
     <style>
+     body {
+       background-color: rgb(34, 39, 46);
+     }
      #tomato {
        width: 400px;
        height: 400px;
@@ -61,7 +64,7 @@ Copyright (C) 2014 Bastian Bechtold
        top: 430px;
        font-family: Calibri, sans-serif;
        font-size: 20px;
-       color: darkred;
+       color: rgb(173, 186, 199);
        visibility: hidden;
      }
      #task_name {
@@ -86,14 +89,15 @@ Copyright (C) 2014 Bastian Bechtold
      }
      table td {
        padding: 10px 20px;
-       border: 1px solid #CCC;
+       border: 1px solid rgb(218, 170, 63);
+       color: rgb(218, 170, 63);
      }
      #history_label, #history_label_today {
        padding: 5px 10px;
        font-family: Calibri, sans-serif;
        font-size: 20px;
        border-radius: 5px;
-       color: darkred;
+       color: rgb(173, 186, 199);
        text-align: center;
      }
      #history_download  {
@@ -105,19 +109,7 @@ Copyright (C) 2014 Bastian Bechtold
        font-family: Calibri, sans-serif;
        font-size: 20px;
        border-radius: 5px;
-       color: darkred;
-     }
-     #footer {
-       position: fixed;
-       bottom: 0px;
-       width: 100%;
-       background-color: white;
-       border-top: 1px solid #EEE;
-       font-family: "Lucida Sans", sans-serif;
-       font-size: 12px;
-       line-height: 25px;
-       height: 30px;
-       text-align: center;
+       color: rgb(173, 186, 199);
      }
     </style>
   </head>
@@ -159,9 +151,6 @@ Copyright (C) 2014 Bastian Bechtold
       </a>
       Upload:
       <input type="file" style="font-size:16px;line-height:20px;" accept=".json" onchange="uploadHistory(this.files)">
-    </div>
-    <div id="footer">
-      This code is licensed under the GPL license. Visit <a href="http://github.com/bastibe/pomodoro-timer">Github</a> to view the source or submit feature requests.
     </div>
     <script>
      var timer;
